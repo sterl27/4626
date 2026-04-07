@@ -8,6 +8,11 @@ name: My First Workflow
       greet:
         runs-on: ubuntu-latest
         steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+    
           - name: Say Hello
             run: echo "GitHub Actions is now running in your repo!"
-    
+          
+          - name: List files
+            run: ls -R
